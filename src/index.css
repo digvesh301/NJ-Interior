@@ -200,7 +200,9 @@ button {
   align-items: center;
   justify-content: center;
   margin-bottom: 6px;
-  /* soft radial halo that fades in with the stamp */
+  /* perspective on parent gives genuine 3-D depth to the coin flip */
+  perspective: 600px;
+  perspective-origin: 50% 50%;
   filter: drop-shadow(0 0 28px rgba(184,150,90,0.0));
   animation: logoHaloFadeIn 0.6s ease 0.55s both;
 }
@@ -208,25 +210,33 @@ button {
   to { filter: drop-shadow(0 0 28px rgba(184,150,90,0.35)); }
 }
 
-/* The logo stamps in: oversized blur → crisp, natural size */
+/* The logo: stamps in from a blurry large state, then coin-flips on Y */
 .intro-logo-img {
   width: 130px; height: 137px;
   object-fit: contain;
   filter: invert(1);
   position: relative;
   z-index: 1;
+  transform-origin: center center;
   animation:
-    logoStamp   0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s both,
-    logoBreathe 4s ease-in-out 1.5s infinite;
+    logoStamp  0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.25s both,
+    coinFlip   4s cubic-bezier(0.4, 0, 0.2, 1)        1.8s infinite;
 }
 @keyframes logoStamp {
   0%   { opacity: 0; transform: scale(1.65); filter: invert(1) blur(12px); }
   60%  { opacity: 1; filter: invert(1) blur(0px); }
-  100% { opacity: 1; transform: scale(1); filter: invert(1) blur(0px); }
+  100% { opacity: 1; transform: scale(1);    filter: invert(1) blur(0px); }
 }
-@keyframes logoBreathe {
-  0%, 100% { transform: scale(1); }
-  50%       { transform: scale(1.04); }
+/* Coin flip: spins 360° on Y in the first 20% of the cycle (0.8s),
+   squeezes to near-zero at 90° & 270° to mimic a coin’s thin edge,
+   then holds flat for the remaining 80% before repeating. */
+@keyframes coinFlip {
+  0%   { transform: perspective(600px) rotateY(0deg)   scaleX(1); }
+  10%  { transform: perspective(600px) rotateY(90deg)  scaleX(0.08); }
+  20%  { transform: perspective(600px) rotateY(180deg) scaleX(1); }
+  30%  { transform: perspective(600px) rotateY(270deg) scaleX(0.08); }
+  40%  { transform: perspective(600px) rotateY(360deg) scaleX(1); }
+  100% { transform: perspective(600px) rotateY(360deg) scaleX(1); }
 }
 
 /* Gold shimmer that sweeps across the logo once, after it lands */
