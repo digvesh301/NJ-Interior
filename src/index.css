@@ -35,6 +35,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  /* Critical: prevents horizontal overflow on mobile.
+     body's overflow-x:hidden breaks when transforms are used (hero Ken Burns, marquee).
+     html-level clip always works. */
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -42,8 +47,15 @@ body {
   background-color: var(--white);
   color: var(--charcoal);
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body.menu-open,
@@ -559,6 +571,8 @@ button {
   padding: 60px 0 50px;
   background: var(--white);
   overflow: hidden;
+  width: 100%;
+  max-width: 100vw;
   border-top: 1px solid var(--light-gray);
   border-bottom: 1px solid var(--light-gray);
 }
@@ -576,6 +590,7 @@ button {
 .marquee-wrapper {
   overflow: hidden;
   width: 100%;
+  max-width: 100vw;
   position: relative;
 }
 
