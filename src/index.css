@@ -1342,6 +1342,7 @@ button {
 }
 
 /* ==================== RESPONSIVE ==================== */
+/* ==================== TABLET (≤1024px) ==================== */
 @media (max-width: 1024px) {
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1358,29 +1359,127 @@ button {
 
   .portfolio-card:nth-child(1) .portfolio-card-img,
   .portfolio-card:nth-child(4) .portfolio-card-img {
-    height: 360px;
+    height: 320px;
   }
 
   .contact-section {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+
+  .about-section {
+    gap: 48px;
+  }
 }
 
+/* ==================== MOBILE (≤768px) ==================== */
 @media (max-width: 768px) {
   :root { --nav-h: 64px; }
 
+  /* --- NAV --- */
   .site-nav { display: none; }
   .nav-hamburger { display: flex; }
   .mobile-nav { display: flex; }
 
+  /* Tighten logo on mobile so it doesn't overflow */
+  .nav-logo {
+    gap: 8px;
+  }
+
+  .nav-logo img,
+  .nav-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-logo-name {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-logo-sub {
+    font-size: 0.48rem;
+    letter-spacing: 0.15em;
+  }
+
+  /* --- HERO --- */
+  .hero-content {
+    left: 5%;
+    right: 5%;
+    bottom: 15%;
+  }
+
+  .hero-slide-title {
+    font-size: clamp(1.6rem, 7vw, 2.8rem);
+    max-width: 100%;
+  }
+
+  .hero-view-btn {
+    padding: 10px 22px;
+    font-size: 0.65rem;
+  }
+
+  .hero-counter {
+    bottom: 14%;
+    right: 5%;
+  }
+
+  .hero-arrows {
+    bottom: 3%;
+    right: 5%;
+  }
+
+  .hero-dots {
+    bottom: 3.5%;
+    left: 5%;
+  }
+
+  /* --- CATEGORIES MARQUEE --- */
+  .marquee-item {
+    width: 170px;
+    height: 120px;
+  }
+
+  /* --- ABOUT --- */
   .about-section {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 80px 5vw;
+    gap: 32px;
+    padding: 70px 5vw;
   }
 
   .about-img-accent { display: none; }
+
+  .about-img-main {
+    height: 320px;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .stat-num {
+    font-size: 2rem;
+  }
+
+  /* --- PROCESS --- */
+  .process-section {
+    padding: 70px 5vw;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .process-step {
+    padding: 28px 16px;
+  }
+
+  /* --- PORTFOLIO --- */
+  .portfolio-section {
+    padding: 80px 5vw;
+  }
 
   .portfolio-grid {
     grid-template-columns: 1fr;
@@ -1391,43 +1490,133 @@ button {
     grid-column: span 1;
   }
 
+  .portfolio-card-img {
+    height: 280px !important;
+  }
+
   .portfolio-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 12px;
+    margin-bottom: 32px;
   }
 
-  .process-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
+  /* --- CONTACT --- */
   .contact-section {
-    padding: 60px 5vw;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+
+  .contact-info {
+    padding: 60px 5vw 40px;
+  }
+
+  .contact-details {
+    margin-top: 24px;
   }
 
   .contact-form-wrap {
-    padding: 32px 24px;
+    padding: 36px 5vw 60px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 
+  .form-submit-btn {
+    width: 100%;
+  }
+
+  /* --- FOOTER --- */
   .site-footer {
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
+    padding: 36px 5vw;
     text-align: center;
+  }
+
+  /* Fix footer logo white-box: use small logo image without invert */
+  .footer-logo img {
+    width: 36px;
+    height: 36px;
+    /* Remove white box: use the PNG on dark bg with no filter */
+    filter: none;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  /* --- MODAL --- */
+  .modal-content {
+    padding: 24px 18px;
+  }
+
+  .modal-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .modal-close {
+    align-self: flex-end;
+    margin-top: -8px;
+  }
+
+  .modal-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
   }
 
   .modal-images-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .modal-img {
+    height: 240px;
   }
 
   .modal-img-wrap:nth-child(1) .modal-img {
     height: 260px;
   }
 }
+
+/* ==================== SMALL MOBILE (≤480px) ==================== */
+@media (max-width: 480px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-logo-sub {
+    display: none; /* Hide tagline on very small screens to prevent overflow */
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .stat-num {
+    font-size: 1.6rem;
+  }
+
+  .section-heading {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .hero-slide-title {
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
+  }
+
+  .intro-logo-wrap img {
+    width: 100px;
+    height: 107px;
+  }
+
+  .intro-studio-name {
+    font-size: clamp(1.4rem, 8vw, 2rem);
+  }
+}
+
