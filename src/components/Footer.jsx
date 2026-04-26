@@ -6,23 +6,21 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="site-footer">
       <div className="footer-logo">
-        <img src="/images/nd_logo_dark.svg" alt="NIR DESIGNS" style={{ width: 44, height: 46, objectFit: 'contain' }} />
+        <img src="/images/main_logo.jpeg" alt="NIR DESIGNS" style={{ width: 44, height: 46, objectFit: 'contain' }} />
         <span className="footer-logo-name">NIR DESIGNS</span>
       </div>
 
       <p className="footer-copy">
-        © {year} NIR DESIGNS [ND] · All Rights Reserved · Ahmedabad
+        © {year} NIR DESIGNS STUDIO [ND] · All Rights Reserved · Ahmedabad
       </p>
 
-      <a
-        href="https://www.instagram.com/nir_designs_nd"
+	  <a href="https://www.google.com/maps/place/Nir+design+studio/@23.1119865,72.5465111,17z"
         target="_blank"
         rel="noopener noreferrer"
         className="footer-ig"
-        id="footer-ig"
-      >
-        <span style={{ fontSize: '1rem' }}>📸</span>
-        @nir_designs_nd
+        id="footer-ig" >
+        <span style={{ fontSize: '1rem' }}>📍</span>
+                 B-655, Money Plant High Street, Jagatpur Road, Ahmedabad
       </a>
     </footer>
   );

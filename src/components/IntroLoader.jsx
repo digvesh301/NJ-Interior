@@ -20,12 +20,12 @@ export default function IntroLoader({ show }) {
     <div className={`intro-loader${phase === 'exiting' ? ' exit' : ''}`}>
       <div className="intro-logo-wrap">
         <img
-          src="/images/nd_logo_dark.svg"
+          src="/images/main_logo.jpeg"
           alt="NIR DESIGNS Logo"
           style={{ width: 140, height: 148, objectFit: 'contain' }}
         />
         <div className="intro-studio-name">
-          NIR <span>DESIGNS</span>
+          NIR <span>DESIGNS STUDIO</span>
         </div>
         <div className="intro-tagline">Interior Design Studio · Ahmedabad</div>
       </div>

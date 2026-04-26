@@ -83,9 +83,10 @@ export default function Portfolio() {
             <div className="section-eyebrow reveal">
               <span>Our Projects</span>
             </div>
-            <h2 className="section-heading reveal">
+            {/* <h2 className="section-heading reveal">
               Featured <em>Portfolio</em>
-            </h2>
+            </h2> */}
+			
           </div>
           <a
             href="https://www.instagram.com/nir_designs_nd"

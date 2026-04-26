@@ -91,17 +91,23 @@ export default function Contact() {
           <div className="section-eyebrow reveal">
             <span>Get In Touch</span>
           </div>
-          <h2 className="section-heading reveal">
-            Let's Create Something<br />
-            <em>Extraordinary</em>
-          </h2>
-          <p className="about-body reveal">
-            Ready to transform your space? Share your vision with us and we'll craft a
-            personalized design experience tailored to your lifestyle and budget.
-          </p>
 
           <div className="contact-details reveal">
-            <div className="contact-detail-item">
+			<div className="contact-detail-item">
+              <div className="contact-detail-icon">📞</div>
+              <div className="contact-detail-text">
+                <strong>Phone</strong>
+                	+91 98982 74832
+              </div>
+            </div>
+			<div className="contact-detail-item">
+              <div className="contact-detail-icon">📧</div>
+              <div className="contact-detail-text">
+                <strong>Email</strong>
+                nirdesignstudio9898@gmail.com
+              </div>
+            </div>
+			<div className="contact-detail-item">
               <div className="contact-detail-icon">📍</div>
               <div className="contact-detail-text">
                 <strong>Studio Location</strong>
@@ -112,7 +118,7 @@ export default function Contact() {
                   style={{ color: 'var(--gold-light)', display: 'block', marginTop: 2 }}
                   id="contact-map-link"
                 >
-                  Nir Design Studio, Ahmedabad, Gujarat
+                  Nir Design Studio, B-655, Jagatpur Road, Ahmedabad
                 </a>
               </div>
             </div>
@@ -129,13 +135,6 @@ export default function Contact() {
                 >
                   @nir_designs_nd
                 </a>
-              </div>
-            </div>
-            <div className="contact-detail-item">
-              <div className="contact-detail-icon">🏛️</div>
-              <div className="contact-detail-text">
-                <strong>Services</strong>
-                Residential · Commercial · 3D Visualization · Turnkey Execution
               </div>
             </div>
           </div>
