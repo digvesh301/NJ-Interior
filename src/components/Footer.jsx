@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="site-footer" id="site-footer">
       <div className="footer-logo">
-        <img src="/images/main_logo.jpeg" alt="NIR DESIGNS" style={{ width: 44, height: 46, objectFit: 'contain' }} />
+        <img src="/images/nd_blueprint_logo.png" alt="NIR DESIGNS" style={{ width: 44, height: 46, objectFit: 'contain' }} />
         <span className="footer-logo-name">NIR DESIGNS</span>
       </div>
 

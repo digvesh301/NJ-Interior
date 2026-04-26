@@ -125,7 +125,9 @@ button {
   to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
-
+.intro-logo-wrap img {
+  filter: invert(1);
+}
 
 .intro-studio-name {
   font-family: var(--font-serif);
@@ -215,6 +217,7 @@ button {
   height: 52px;
   object-fit: contain;
   flex-shrink: 0;
+  background-color: transparent;
 }
 
 .nav-logo-text {

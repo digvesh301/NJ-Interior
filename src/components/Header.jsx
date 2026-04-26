@@ -42,7 +42,7 @@ export default function Header() {
           tabIndex={0}
           onKeyDown={(e) => e.key === 'Enter' && navigate('/')}
         >
-          <img src="/images/main_logo.jpeg" alt="NIR DESIGNS" className="nav-logo-img" />
+          <img src="/images/nd_blueprint_logo.png" alt="NIR DESIGNS" className="nav-logo-img" />
           <div className="nav-logo-text">
             <span className="nav-logo-name">NIR DESIGNS STUDIO</span>
             <span className="nav-logo-sub">Architecture &amp; Interior Designer</span>
