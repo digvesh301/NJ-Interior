@@ -14,10 +14,11 @@ export default function IntroLoader({ show }) {
   return (
     <div className={`intro-loader${exit ? ' exit' : ''}`}>
       <div className="intro-logo-wrap">
+        {/* Use the transparent dark-mode SVG — no filter needed */}
         <img
-          src="/images/nd_logo.png"
+          src="/images/nd_logo_dark.svg"
           alt="NIR DESIGNS Logo"
-          className="intro-logo-img"
+          style={{ width: 140, height: 148, objectFit: 'contain' }}
         />
         <div className="intro-studio-name">
           NIR <span>DESIGNS</span>

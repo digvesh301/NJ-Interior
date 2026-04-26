@@ -32,10 +32,10 @@ export default function Header() {
       <header className={`site-header ${scrolled ? 'scrolled' : 'at-top'}`} id="site-header">
         {/* Logo */}
         <div className="nav-logo" onClick={() => scrollTo('hero')} id="nav-logo">
-          <img src="/images/nd_logo.png" alt="NIR DESIGNS" />
+          <img src="/images/nd_logo.png" alt="NIR DESIGNS" className="nav-logo-img" />
           <div className="nav-logo-text">
             <span className="nav-logo-name">NIR DESIGNS</span>
-            <span className="nav-logo-sub">Interior Studio</span>
+            <span className="nav-logo-sub">Architecture & Interior Designer</span>
           </div>
         </div>
 

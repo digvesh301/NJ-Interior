@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" width="400" height="420">
+  <!-- Transparent background — works on dark intro screen -->
+
+  <!-- Architectural grid lines in gold/amber -->
+  <line x1="40" y1="80"  x2="360" y2="80"  stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="140" x2="360" y2="140" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="230" x2="360" y2="230" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="40" y1="285" x2="360" y2="285" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="80"  y1="45" x2="80"  y2="320" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="155" y1="45" x2="155" y2="320" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="255" y1="45" x2="255" y2="320" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+  <line x1="328" y1="45" x2="328" y2="320" stroke="#B8965A" stroke-width="0.7" opacity="0.4"/>
+
+  <!-- Letter N — two verticals + diagonal, all gold -->
+  <rect x="80" y="80" width="38" height="205" fill="#B8965A"/>
+  <rect x="138" y="80" width="38" height="205" fill="#B8965A"/>
+  <polygon points="80,80 118,80 176,285 138,285" fill="#B8965A"/>
+
+  <!-- Letter D — vertical bar + bold curved body, all gold -->
+  <rect x="176" y="80" width="36" height="205" fill="#B8965A"/>
+  <path d="M 208 80 Q 348 80 348 182 Q 348 285 208 285 Z" fill="#B8965A"/>
+  <!-- White cutout to create the D's counter form -->
+  <path d="M 214 122 Q 300 122 300 182 Q 300 242 214 242 Z" fill="#111111"/>
+
+  <!-- NIR DESIGNS text in white -->
+  <text
+    x="200" y="344"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="26"
+    font-weight="800"
+    letter-spacing="8"
+    fill="#FFFFFF"
+  >NIR DESIGNS</text>
+
+  <!-- Tagline in gold -->
+  <text
+    x="200" y="368"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="9.5"
+    font-weight="400"
+    letter-spacing="3.5"
+    fill="#B8965A"
+  >ARCHITECT &amp; INTERIOR DESIGNER</text>
+</svg>

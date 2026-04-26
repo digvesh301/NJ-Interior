@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- White background -->
+  <rect width="400" height="400" fill="white"/>
+
+  <!-- Architectural grid lines (thin, light gray) -->
+  <line x1="40" y1="80"  x2="360" y2="80"  stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="40" y1="130" x2="360" y2="130" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="40" y1="230" x2="360" y2="230" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="40" y1="280" x2="360" y2="280" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="80"  y1="50" x2="80"  y2="320" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="150" y1="50" x2="150" y2="320" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="255" y1="50" x2="255" y2="320" stroke="#D0CCc7" stroke-width="0.8"/>
+  <line x1="325" y1="50" x2="325" y2="320" stroke="#D0CCc7" stroke-width="0.8"/>
+
+  <!-- Letter N — bold strokes with diagonal -->
+  <rect x="80" y="80" width="36" height="200" fill="#B8965A"/>
+  <rect x="134" y="80" width="36" height="200" fill="#B8965A"/>
+  <polygon points="80,80 116,80 170,280 134,280" fill="#B8965A"/>
+
+  <!-- Letter D — bold with curved right side -->
+  <rect x="170" y="80" width="36" height="200" fill="#B8965A"/>
+  <path d="M 200 80 Q 340 80 340 180 Q 340 280 200 280 Z" fill="#B8965A"/>
+  <path d="M 206 120 Q 296 120 296 180 Q 296 240 206 240 Z" fill="white"/>
+
+  <!-- NIR DESIGNS text -->
+  <text
+    x="200" y="334"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="800"
+    letter-spacing="7"
+    fill="#1C1A17"
+  >NIR DESIGNS</text>
+
+  <!-- Tagline -->
+  <text
+    x="200" y="360"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    font-weight="400"
+    letter-spacing="3"
+    fill="#B8965A"
+  >ARCHITECT &amp; INTERIOR DESIGNER</text>
+</svg>
