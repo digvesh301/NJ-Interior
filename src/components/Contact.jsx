@@ -110,7 +110,7 @@ export default function Contact() {
 			<div className="contact-detail-item">
               <div className="contact-detail-icon">📍</div>
               <div className="contact-detail-text">
-                <strong>Studio Location</strong>
+                <strong>Address</strong>
                 <a
                   href="https://www.google.com/maps/place/Nir+design+studio/@23.1119865,72.5465111,17z"
                   target="_blank"
