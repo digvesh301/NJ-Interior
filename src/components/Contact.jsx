@@ -229,7 +229,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="contact-projectType">Project Type</label>
                 <select
                   id="contact-projectType"
@@ -243,7 +243,7 @@ export default function Contact() {
                     </option>
                   ))}
                 </select>
-              </div>
+              </div> */}
 
               <div className="form-group">
                 <label htmlFor="contact-budget">Approximate Budget</label>
@@ -262,7 +262,7 @@ export default function Contact() {
                 <textarea
                   id="contact-message"
                   name="message"
-                  placeholder="Describe your space, style preferences, and any specific requirements..."
+                  placeholder="e.g. We want to design our new 3BHK apartment. We love modern, minimalist styles with wood accents and warm lighting. We specifically need a custom modular kitchen and a dedicated home office space."
                   value={form.message}
                   onChange={handleChange}
                 />

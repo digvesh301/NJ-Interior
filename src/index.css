@@ -1247,7 +1247,7 @@ button {
 
 /* ==================== PORTFOLIO SECTION ==================== */
 .portfolio-section {
-  padding: 100px 6vw;
+  padding: calc(var(--nav-h) + 60px) 6vw 100px;
   background: var(--off-white);
 }
 
@@ -1453,7 +1453,7 @@ button {
 
 /* ==================== CONTACT SECTION ==================== */
 .contact-section {
-  padding: 100px 6vw;
+  padding: calc(var(--nav-h) + 60px) 6vw 100px;
   background: var(--charcoal);
   display: grid;
   grid-template-columns: 1fr 1.2fr;
@@ -1994,7 +1994,7 @@ button {
 
   /* --- PORTFOLIO --- */
   .portfolio-section {
-    padding: 80px 5vw;
+    padding: calc(var(--nav-h) + 60px) 5vw 80px;
   }
 
   .portfolio-grid {
@@ -2011,9 +2011,10 @@ button {
   }
 
   .portfolio-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
     margin-bottom: 32px;
   }
 
@@ -2025,7 +2026,7 @@ button {
   }
 
   .contact-info {
-    padding: 60px 5vw 40px;
+    padding: calc(var(--nav-h) + 60px) 5vw 40px;
   }
 
   .contact-details {
@@ -2053,12 +2054,10 @@ button {
     text-align: center;
   }
 
-  /* Fix footer logo white-box: use small logo image without invert */
   .footer-logo img {
     width: 36px;
     height: 36px;
-    /* Remove white box: use the PNG on dark bg with no filter */
-    filter: none;
+    filter: invert(1);
   }
 
   .footer-logo {
