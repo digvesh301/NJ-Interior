@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from 'react';
 
 export default function IntroLoader({ show }) {
-  const [exit, setExit] = useState(false);
+  const [phase, setPhase] = useState('visible'); // 'visible' | 'exiting' | 'done'
 
   useEffect(() => {
-    if (!show) {
-      setExit(true);
+    if (!show && phase === 'visible') {
+      // Start the exit slide-up animation
+      setPhase('exiting');
+      // Remove from DOM only AFTER animation completes (0.9s anim + 0.2s delay = ~1.2s)
+      const doneTimer = setTimeout(() => setPhase('done'), 1200);
+      return () => clearTimeout(doneTimer);
     }
   }, [show]);
 
-  if (!show && !exit) return null;
+  // Fully removed from DOM — no flicker, no blank frame
+  if (phase === 'done') return null;
 
   return (
-    <div className={`intro-loader${exit ? ' exit' : ''}`}>
+    <div className={`intro-loader${phase === 'exiting' ? ' exit' : ''}`}>
       <div className="intro-logo-wrap">
-        {/* Use the transparent dark-mode SVG — no filter needed */}
         <img
           src="/images/nd_logo_dark.svg"
           alt="NIR DESIGNS Logo"

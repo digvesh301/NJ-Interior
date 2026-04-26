@@ -84,30 +84,33 @@ button {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  /* Force GPU compositing layer from the start — prevents jank on exit */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .intro-loader.exit {
-  animation: loaderExit 0.9s cubic-bezier(0.77, 0, 0.18, 1) 0.2s forwards;
+  animation: loaderExit 1s cubic-bezier(0.86, 0, 0.07, 1) 0.15s both;
+  pointer-events: none;
 }
 
 @keyframes loaderExit {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-100%); }
+  0%   { transform: translate3d(0, 0, 0); opacity: 1; }
+  100% { transform: translate3d(0, -100%, 0); opacity: 1; }
 }
 
 .intro-logo-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-  animation: fadeInUp 0.8s ease forwards;
-  animation-delay: 0.3s;
-  opacity: 0;
+  gap: 6px;
+  animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translate3d(0, 24px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
 }
 
 
@@ -128,12 +131,12 @@ button {
 
 .intro-tagline {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.4em;
   color: var(--mid-gray);
   text-transform: uppercase;
-  animation: introFadeIn 0.8s ease 0.7s both;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
 }
 
 .intro-progress-bar {
@@ -663,7 +666,7 @@ button {
   align-items: center;
 }
 
-.about-text-col {}
+
 
 .section-eyebrow {
   display: flex;
@@ -719,7 +722,7 @@ button {
   border-top: 1px solid var(--mid-gray);
 }
 
-.stat-item {}
+
 
 .stat-num {
   font-family: var(--font-serif);
@@ -976,7 +979,7 @@ button {
   color: var(--white);
 }
 
-.modal-title-area {}
+
 
 .modal-cat {
   font-size: 0.65rem;

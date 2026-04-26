@@ -10,18 +10,28 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  // 'loading' controls the intro overlay
+  // 'mounted' controls whether main content is in the DOM
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Show intro for 2.8s then hide
-    const timer = setTimeout(() => setLoading(false), 2800);
-    return () => clearTimeout(timer);
+    // Pre-mount the main content immediately so images start loading
+    setMounted(true);
+
+    // Hide the intro after 2.8s (triggers exit slide-up animation)
+    const hideTimer = setTimeout(() => setLoading(false), 2800);
+    return () => clearTimeout(hideTimer);
   }, []);
 
   return (
     <>
+      {/* Intro overlay — always rendered until fully exited */}
       <IntroLoader show={loading} />
-      {!loading && (
+
+      {/* Main content — pre-mounted immediately so images preload,
+          but visually hidden by the loader sitting on top (z-index 10000) */}
+      {mounted && (
         <>
           <Header />
           <main>
