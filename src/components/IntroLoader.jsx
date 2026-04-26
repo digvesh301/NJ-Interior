@@ -63,17 +63,26 @@ export default function IntroLoader({ show }) {
           <div className="intro-logo-shimmer" />
         </div>
 
-        {/* Studio name — letter-by-letter reveal */}
+        {/* Studio name — letter-by-letter reveal, grouped by word to prevent mid-word wrapping */}
         <div className="intro-studio-name">
-          {'NIR'.split('').map((ch, i) => (
-            <span key={i} className="intro-letter" style={{ animationDelay: `${0.55 + i * 0.08}s` }}>{ch}</span>
-          ))}
-          &nbsp;
-          {'DESIGNS STUDIO'.split('').map((ch, i) => (
-            <span key={i} className="intro-letter intro-letter--gold" style={{ animationDelay: `${0.78 + i * 0.05}s` }}>
-              {ch === ' ' ? '\u00A0' : ch}
-            </span>
-          ))}
+          {/* Word: NIR */}
+          <span className="intro-word">
+            {'NIR'.split('').map((ch, i) => (
+              <span key={i} className="intro-letter" style={{ animationDelay: `${0.55 + i * 0.08}s` }}>{ch}</span>
+            ))}
+          </span>
+          {/* Word: DESIGNS */}
+          <span className="intro-word intro-word--gold">
+            {'DESIGNS'.split('').map((ch, i) => (
+              <span key={i} className="intro-letter intro-letter--gold" style={{ animationDelay: `${0.78 + i * 0.05}s` }}>{ch}</span>
+            ))}
+          </span>
+          {/* Word: STUDIO */}
+          <span className="intro-word intro-word--gold">
+            {'STUDIO'.split('').map((ch, i) => (
+              <span key={i} className="intro-letter intro-letter--gold" style={{ animationDelay: `${1.14 + i * 0.05}s` }}>{ch}</span>
+            ))}
+          </span>
         </div>
 
         {/* Cycling word */}

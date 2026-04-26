@@ -267,11 +267,17 @@ button {
   color: var(--white);
   letter-spacing: 0.28em;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0;
+  align-items: baseline;
+  gap: 0 0.28em; /* gap between words = 1 letter-spacing unit */
+}
+/* Each word is a non-breaking flex group — wraps only between words */
+.intro-word {
+  display: inline-flex;
+  white-space: nowrap;
 }
 .intro-letter {
   display: inline-block;
@@ -2504,7 +2510,9 @@ button {
   }
 
   .intro-studio-name {
-    font-size: clamp(1.4rem, 8vw, 2rem);
+    font-size: clamp(1.2rem, 7vw, 1.9rem);
+    letter-spacing: 0.18em;
+    gap: 0 0.18em;
   }
 }
 
