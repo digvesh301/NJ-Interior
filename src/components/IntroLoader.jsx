@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const LINES = ['Architecture', 'Interiors', 'Excellence'];
+const LINES = ['Architecture', 'Interiors'];
 
 export default function IntroLoader({ show }) {
   const [phase, setPhase] = useState('visible'); // 'visible' | 'exiting' | 'done'
