@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
           <div className="footer-brand-text">
             <p className="footer-brand-name-center">
-              NIR <span>DESIGNS</span>
+              NIR <span>DESIGNS STUDIO</span>
             </p>
             <p className="footer-brand-tagline-center">Architect &amp; Interior Designer</p>
           </div>
@@ -27,26 +27,9 @@ export default function Footer() {
       {/* 3-block info row: Address | Phone | Email */}
       <div className="footer-info-row">
 
-        <div className="footer-info-block">
-          <span className="footer-info-label">
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-            </svg>
-            Address
-          </span>
-          <a
-            href="https://www.google.com/maps/place/Nir+design+studio/@23.1119865,72.5465111,17z"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-info-value footer-info-link"
-          >
-            B-655, Money Plant High Street,<br />
-            Jagatpur Road, Ahmedabad, Gujarat
-          </a>
-        </div>
+        
 
-        <div className="footer-info-divider" />
-
+       
         <div className="footer-info-block">
           <span className="footer-info-label">
             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -70,6 +53,27 @@ export default function Footer() {
           </span>
           <a href="mailto:nirdesignstudio9898@gmail.com" className="footer-info-value footer-info-link" id="footer-email">
             nirdesignstudio9898@gmail.com
+          </a>
+        </div>
+
+	  <div className="footer-info-divider" />
+
+
+		<div className="footer-info-block">
+          <span className="footer-info-label">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Address
+          </span>
+          <a
+            href="https://www.google.com/maps/place/Nir+design+studio/@23.1119865,72.5465111,17z"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-info-value footer-info-link"
+          >
+            B-655, Money Plant High Street,<br />
+            Jagatpur Road, Ahmedabad, Gujarat
           </a>
         </div>
 
