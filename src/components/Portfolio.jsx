@@ -88,7 +88,7 @@ export default function Portfolio() {
             </h2> */}
 			
           </div>
-          <a
+          {/* <a
             href="https://www.instagram.com/nir_designs_nd"
             target="_blank"
             rel="noopener noreferrer"
@@ -107,7 +107,7 @@ export default function Portfolio() {
             id="portfolio-ig-link"
           >
             View on Instagram ↗
-          </a>
+          </a> */}
         </div>
 
         <div className="portfolio-grid" id="portfolio-grid">
