@@ -1984,159 +1984,192 @@ button {
 .site-footer {
   background: var(--black);
   position: relative;
-  padding: 60px 6vw 0;
+  padding: 0 0;
 }
 
+/* ── Top decorative bar ── */
+.footer-top-bar {
+  padding: 0 6vw;
+}
 .footer-top-line {
   height: 1px;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(184,150,90,0.5) 30%,
-    rgba(184,150,90,0.5) 70%,
+    rgba(184,150,90,0.5) 20%,
+    rgba(184,150,90,0.5) 80%,
     transparent 100%);
-  margin-bottom: 56px;
 }
 
-/* --- Centered brand block --- */
-.footer-brand-center {
+/* ── Centered brand block ── */
+.footer-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;
-  margin-bottom: 52px;
+  text-align: center;
+  padding: 56px 6vw 48px;
 }
 
-/* Logo + text in one row */
-.footer-brand-row {
-  display: flex;
-  align-items: center;
-  gap: 18px;
+.footer-brand-logo {
+  margin-bottom: 22px;
 }
-
-.footer-logo-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.footer-brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  text-align: left;
-}
-.footer-logo-center img {
-  width: 56px;
-  height: 60px;
+.footer-brand-logo img {
+  width: 54px;
+  height: 58px;
   object-fit: contain;
   filter: invert(1) brightness(1.4);
   transition: filter 0.35s;
 }
-.footer-logo-center:hover img {
+.footer-brand-logo:hover img {
   filter: invert(1) brightness(1.8) sepia(0.3) saturate(2);
 }
 
-.footer-brand-name-center {
+.footer-brand-name {
   font-family: var(--font-serif);
-  font-size: 1.6rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 300;
-  letter-spacing: 0.35em;
+  letter-spacing: 0.4em;
   color: var(--white);
   text-transform: uppercase;
   line-height: 1;
-  text-align: center;
+  margin: 0 0 10px;
 }
-.footer-brand-name-center span {
-  color: var(--gold-light);
-}
+.footer-brand-name span { color: var(--gold-light); }
 
-.footer-brand-tagline-center {
+.footer-brand-sub {
   font-family: var(--font-sans);
-  font-size: 0.58rem;
-  letter-spacing: 0.42em;
+  font-size: 0.6rem;
+  letter-spacing: 0.4em;
   text-transform: uppercase;
   color: var(--gold);
-  text-align: center;
+  margin: 0 0 32px;
 }
 
-/* --- 3-block horizontal info row --- */
-.footer-info-row {
+/* ── Social buttons – pill with label ── */
+.footer-socials {
   display: flex;
-  align-items: stretch;
+  gap: 14px;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.footer-social-btn--wa {
+  background: transparent;
+  border: 1px solid rgba(184,150,90,0.45);
+  color: var(--gold-light);
+  box-shadow: 0 2px 12px rgba(184,150,90,0.08);
+}
+.footer-social-btn--wa:hover {
+  transform: translateY(-2px);
+  background: rgba(184,150,90,0.1);
+  border-color: var(--gold-light);
+  box-shadow: 0 6px 22px rgba(184,150,90,0.25);
+}
+
+.footer-social-btn--ig {
+  background: transparent;
+  border: 1px solid rgba(184,150,90,0.45);
+  color: var(--gold-light);
+  box-shadow: 0 2px 12px rgba(184,150,90,0.08);
+}
+.footer-social-btn--ig:hover {
+  transform: translateY(-2px);
+  background: rgba(184,150,90,0.1);
+  border-color: var(--gold-light);
+  box-shadow: 0 6px 22px rgba(184,150,90,0.25);
+}
+
+/* ── Contact strip ── */
+.footer-contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 0;
   border-top: 1px solid rgba(255,255,255,0.07);
   border-bottom: 1px solid rgba(255,255,255,0.07);
-  margin-bottom: 0;
+  padding: 28px 6vw;
 }
 
-.footer-info-block {
-  flex: 1;
+.footer-contact-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 10px;
-  padding: 36px 24px;
-}
-
-.footer-info-label {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  font-family: var(--font-sans);
-  font-size: 0.58rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 500;
-}
-
-.footer-info-value {
+  text-decoration: none;
+  color: rgba(255,255,255,0.5);
   font-family: var(--font-sans);
   font-size: 0.82rem;
-  line-height: 1.8;
-  color: rgba(255,255,255,0.55);
+  padding: 6px 28px;
+  transition: color 0.25s;
 }
-
-.footer-info-link {
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.footer-info-link:hover {
+.footer-contact-item:hover {
   color: var(--gold-light);
 }
 
-/* Vertical gold pillar dividers */
-.footer-info-divider {
-  width: 1px;
-  background: linear-gradient(180deg,
-    transparent 0%,
-    rgba(184,150,90,0.4) 25%,
-    rgba(184,150,90,0.4) 75%,
-    transparent 100%);
+.footer-contact-icon {
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(184,150,90,0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
   flex-shrink: 0;
-  align-self: stretch;
+  transition: background 0.25s, border-color 0.25s;
+}
+.footer-contact-item:hover .footer-contact-icon {
+  background: rgba(184,150,90,0.12);
+  border-color: rgba(184,150,90,0.7);
 }
 
-/* --- Bottom copyright bar --- */
+.footer-contact-text {
+  line-height: 1.5;
+}
+
+/* vertical gold separator between items */
+.footer-contact-sep {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(180deg,
+    transparent, rgba(184,150,90,0.45), transparent);
+  flex-shrink: 0;
+}
+
+/* ── Bottom copyright bar ── */
 .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 22px 0;
+  gap: 10px;
+  padding: 18px 6vw;
 }
+
 .footer-copy {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
   color: rgba(255,255,255,0.22);
 }
-.footer-bottom-divider {
-  color: rgba(255,255,255,0.15);
-  font-size: 0.7rem;
+
+.footer-copy-dot {
+  color: rgba(184,150,90,0.4);
+  font-size: 0.8rem;
 }
+
 
 /* ==================== SECTION REVEAL ANIMATIONS ==================== */
 .reveal {
@@ -2395,49 +2428,38 @@ button {
 
 
   /* --- FOOTER --- */
-  .site-footer {
-    padding: 40px 5vw 0;
+  .footer-brand {
+    padding: 44px 5vw 36px;
   }
 
-  .footer-top-line {
-    margin-bottom: 36px;
-  }
-
-  .footer-brand-center {
-    margin-bottom: 36px;
-  }
-
-  .footer-brand-name-center {
-    font-size: 1.25rem;
-    letter-spacing: 0.25em;
-  }
-
-  /* Stack info blocks vertically on mobile */
-  .footer-info-row {
+  .footer-contact-strip {
     flex-direction: column;
-    border-left: none;
-    border-right: none;
+    align-items: flex-start;
+    padding: 20px 5vw;
+    gap: 0;
   }
 
-  .footer-info-block {
-    padding: 24px 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+  .footer-contact-item {
+    padding: 12px 0;
+    width: 100%;
   }
 
-  .footer-info-block:last-child {
-    border-bottom: none;
-  }
-
-  /* Hide vertical pillar dividers on mobile */
-  .footer-info-divider {
+  .footer-contact-sep {
     display: none;
+  }
+
+  .footer-contact-strip .footer-contact-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 
   .footer-bottom {
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     text-align: center;
+    padding: 16px 5vw;
   }
+
+  .footer-copy-dot { display: none; }
 
   /* --- MODAL --- */
   .modal-content {
