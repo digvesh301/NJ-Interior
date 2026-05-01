@@ -8,6 +8,7 @@ const SLIDES = [
     title: 'The Art of Refined Living',
     subtitle: 'Luxury Living Room · Ahmedabad',
     category: 'Living Room',
+    zoom: 'zoom-in',        // zoom from center
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ const SLIDES = [
     title: 'Where Comfort Meets Elegance',
     subtitle: 'Master Bedroom · Minimalist Retreat',
     category: 'Bedroom',
+    zoom: 'zoom-in-top',    // zoom from top-left
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const SLIDES = [
     title: 'Culinary Spaces, Elevated',
     subtitle: 'Modular Kitchen · Contemporary',
     category: 'Kitchen',
+    zoom: 'zoom-in-bottom', // zoom from bottom-right
   },
   {
     id: 4,
@@ -32,6 +35,7 @@ const SLIDES = [
     title: 'Spaces That Inspire Work',
     subtitle: 'Work Studio · Natural Warmth',
     category: 'Office',
+    zoom: 'zoom-in',
   },
   {
     id: 5,
@@ -40,21 +44,29 @@ const SLIDES = [
     title: 'A Sanctuary of Serenity',
     subtitle: 'Master Bathroom · Spa Aesthetic',
     category: 'Bathroom',
+    zoom: 'zoom-in-top',
   },
 ];
 
 export default function HeroSlider() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const [animKey, setAnimKey]     = useState(0); // forces image re-mount → restarts animation
   const intervalRef = useRef(null);
 
   const goTo = useCallback((idx) => {
-    setActiveIdx((idx + SLIDES.length) % SLIDES.length);
+    const next = (idx + SLIDES.length) % SLIDES.length;
+    setActiveIdx(next);
+    setAnimKey((k) => k + 1); // re-trigger zoom animation
   }, []);
 
   const resetInterval = useCallback(() => {
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
-      setActiveIdx((prev) => (prev + 1) % SLIDES.length);
+      setActiveIdx((prev) => {
+        const next = (prev + 1) % SLIDES.length;
+        setAnimKey((k) => k + 1);
+        return next;
+      });
     }, 6000);
   }, []);
 
@@ -85,10 +97,12 @@ export default function HeroSlider() {
             key={slide.id}
             className={`hero-slide${idx === activeIdx ? ' active' : ''}`}
           >
+            {/* key={animKey} forces React to unmount+remount → CSS animation restarts */}
             <img
+              key={idx === activeIdx ? animKey : slide.id}
               src={slide.image}
               alt={slide.title}
-              className="hero-slide-img"
+              className={`hero-slide-img hero-slide-img--${slide.zoom}`}
               loading={idx === 0 ? 'eager' : 'lazy'}
             />
             <div className="hero-overlay" />

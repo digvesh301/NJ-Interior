@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="footer-brand-logo">
           <img src="/images/nd_blueprint_logo.png" alt="NIR DESIGNS" />
         </div>
-        <h2 className="footer-brand-name">NIR <span>DESIGNS</span></h2>
+        <h2 className="footer-brand-name">NIR <span>DESIGNS STUDIO</span></h2>
         <p className="footer-brand-sub">Architect &amp; Interior Designer</p>
 
         {/* Social row */}

@@ -30,7 +30,7 @@ export default function About() {
         </div>
        
         <p className="about-body reveal">
-          NIR DESIGNS [ND] is a premier interior design studio based in Ahmedabad, Gujarat. 
+          NIR DESIGNS STUDIO is a premier interior design studio based in Ahmedabad, Gujarat. 
           Founded by Niraj Patel, we specialize in transforming residential and commercial spaces 
           into timeless works of art — where functionality meets refined aesthetics.
         </p>

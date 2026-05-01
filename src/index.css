@@ -620,31 +620,49 @@ button {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: opacity 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hero-slide.active {
   opacity: 1;
 }
 
+/* ── Base image styles ── */
 .hero-slide-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  transform-origin: center;
-  animation: kenBurns 8s ease-in-out forwards;
   will-change: transform;
   image-rendering: -webkit-optimize-contrast;
 }
 
-.hero-slide.active .hero-slide-img {
-  animation: kenBurns 8s ease-in-out forwards;
+/* ── Zoom variant: from center ── */
+.hero-slide-img--zoom-in {
+  transform-origin: center center;
+  animation: zoomFromCenter 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-@keyframes kenBurns {
-  0%   { transform: scale(1); }
-  100% { transform: scale(1.12); }
+/* ── Zoom variant: from top-left corner ── */
+.hero-slide-img--zoom-in-top {
+  transform-origin: 30% 30%;
+  animation: zoomFromCorner 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* ── Zoom variant: from bottom-right corner ── */
+.hero-slide-img--zoom-in-bottom {
+  transform-origin: 70% 70%;
+  animation: zoomFromCorner 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes zoomFromCenter {
+  0%   { transform: scale(1);    }
+  100% { transform: scale(1.14); }
+}
+
+@keyframes zoomFromCorner {
+  0%   { transform: scale(1);    }
+  100% { transform: scale(1.16); }
 }
 
 .hero-overlay {
@@ -2013,8 +2031,8 @@ button {
   margin-bottom: 22px;
 }
 .footer-brand-logo img {
-  width: 54px;
-  height: 58px;
+  width: 90px;
+  height: 96px;
   object-fit: contain;
   filter: invert(1) brightness(1.4);
   transition: filter 0.35s;
