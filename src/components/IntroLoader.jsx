@@ -93,7 +93,7 @@ export default function IntroLoader({ show }) {
         </div>
 
         {/* Tagline */}
-        <div className="intro-tagline">Architect &amp; Interior Designer</div>
+        <div className="intro-tagline">Architecture &amp; Interior Designer</div>
       </div>
 
       {/* Counter */}
