@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-// ⚠️ Replace SHEET_URL with your actual Google Apps Script Web App URL
-const SHEET_URL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec';
+
 
 const PROJECT_TYPES = [
   'Select Project Type',
@@ -64,20 +63,23 @@ export default function Contact() {
     setError('');
 
     try {
-      const params = new URLSearchParams({
-        ...form,
-        timestamp: new Date().toISOString(),
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
       });
 
-      await fetch(`${SHEET_URL}?${params.toString()}`, {
-        method: 'GET',
-        mode: 'no-cors',
-      });
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
 
       setSuccess(true);
       setForm(INITIAL_FORM);
     } catch (err) {
-      setError('Something went wrong. Please try again or contact us directly.');
+      setError(err.message || 'Something went wrong. Please try again or contact us directly.');
     } finally {
       setSubmitting(false);
     }
@@ -93,21 +95,21 @@ export default function Contact() {
           </div>
 
           <div className="contact-details reveal">
-			<div className="contact-detail-item">
+            <div className="contact-detail-item">
               <div className="contact-detail-icon">📞</div>
               <div className="contact-detail-text">
                 <strong>Phone</strong>
-                	+91 98982 74832
+                +91 98982 74832
               </div>
             </div>
-			<div className="contact-detail-item">
+            <div className="contact-detail-item">
               <div className="contact-detail-icon">📧</div>
               <div className="contact-detail-text">
                 <strong>Email</strong>
                 nirdesignstudio9898@gmail.com
               </div>
             </div>
-			<div className="contact-detail-item">
+            <div className="contact-detail-item">
               <div className="contact-detail-icon">📍</div>
               <div className="contact-detail-text">
                 <strong>Address</strong>
@@ -118,7 +120,7 @@ export default function Contact() {
                   style={{ color: 'var(--gold-light)', display: 'block', marginTop: 2 }}
                   id="contact-map-link"
                 >
-                  Nir Design Studio, B-655, Jagatpur Road, Ahmedabad
+                  B-655, Money Plant High Street, Jagatpur Road, Ahmedabad
                 </a>
               </div>
             </div>
@@ -139,29 +141,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="social-links reveal">
-            <a
-              href="https://www.instagram.com/nir_designs_nd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="Instagram"
-              id="contact-social-ig"
-            >
-              IG
-            </a>
-            <a
-              href="https://www.instagram.com/patelniraj_nd"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="Instagram - Niraj Patel"
-              id="contact-social-ig2"
-              style={{ fontSize: '0.65rem', letterSpacing: '0.05em' }}
-            >
-              ND
-            </a>
-          </div>
+
         </div>
 
         {/* Form column */}

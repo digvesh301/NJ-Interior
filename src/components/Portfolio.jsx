@@ -86,7 +86,7 @@ export default function Portfolio() {
             {/* <h2 className="section-heading reveal">
               Featured <em>Portfolio</em>
             </h2> */}
-			
+
           </div>
           {/* <a
             href="https://www.instagram.com/nir_designs_nd"
@@ -127,11 +127,11 @@ export default function Portfolio() {
                 loading="lazy"
               />
               <div className="portfolio-card-overlay">
-                <div className="portfolio-card-info">
+                {/* <div className="portfolio-card-info">
                   <div className="portfolio-card-cat">{project.category}</div>
                   <div className="portfolio-card-title">{project.title}</div>
                   <div className="portfolio-card-action">View Project →</div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
