@@ -11,7 +11,7 @@ export default function AboutPage() {
         <div className="page-hero-content">
           <div className="page-hero-eyebrow">Our Story</div>
           <h1 className="page-hero-title">NIR <span>DESIGNS STUDIO</span></h1>
-          <p className="page-hero-sub">Architecture &amp; Interior Designer, Ahmedabad</p>
+          <p className="page-hero-sub">Architecture &amp; Interior Designer</p>
         </div>
       </div>
       <TextMarquee />
