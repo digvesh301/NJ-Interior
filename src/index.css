@@ -1508,7 +1508,7 @@ button {
 
 /* ==================== ABOUT / PROCESS SECTION ==================== */
 .about-section {
-  padding: 120px 6vw;
+  padding: 60px 6vw;
   background: var(--off-white);
   display: grid;
   grid-template-columns: 1fr 1fr;
