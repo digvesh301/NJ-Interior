@@ -4,6 +4,7 @@ const PROJECTS = [
   {
     id: 'p1',
     title: 'The Prestige Villa',
+    client: 'Nitin Patel',
     category: 'Residential',
     cover: '/images/project1.png',
     images: ['/images/project1.png', '/images/slide1.png', '/images/slide2.png', '/images/slide5.png'],
@@ -12,6 +13,7 @@ const PROJECTS = [
   {
     id: 'p2',
     title: 'Skyline Office Hub',
+    client: 'Aditya Mehta',
     category: 'Commercial',
     cover: '/images/project2.png',
     images: ['/images/project2.png', '/images/slide4.png'],
@@ -20,6 +22,7 @@ const PROJECTS = [
   {
     id: 'p3',
     title: 'The White Villa',
+    client: 'Sanjay Shah',
     category: 'Architecture',
     cover: '/images/project3.png',
     images: ['/images/project3.png', '/images/slide1.png', '/images/slide3.png'],
@@ -28,6 +31,7 @@ const PROJECTS = [
   {
     id: 'p4',
     title: "Elara's Wonderland",
+    client: 'Kavita Joshi',
     category: 'Children\'s Room',
     cover: '/images/project4.png',
     images: ['/images/project4.png', '/images/slide2.png'],
@@ -36,6 +40,7 @@ const PROJECTS = [
   {
     id: 'p5',
     title: 'Midnight Loft',
+    client: 'Rohan Sharma',
     category: '3D Visualization',
     cover: '/images/project5.png',
     images: ['/images/project5.png', '/images/slide1.png', '/images/slide5.png'],
@@ -127,11 +132,9 @@ export default function Portfolio() {
                 loading="lazy"
               />
               <div className="portfolio-card-overlay">
-                {/* <div className="portfolio-card-info">
-                  <div className="portfolio-card-cat">{project.category}</div>
-                  <div className="portfolio-card-title">{project.title}</div>
-                  <div className="portfolio-card-action">View Project →</div>
-                </div> */}
+                <div className="portfolio-card-info">
+                  <div className="portfolio-card-client">Client: {project.client}</div>
+                </div>
               </div>
             </div>
           ))}
@@ -148,7 +151,9 @@ export default function Portfolio() {
           <div className="modal-content">
             <div className="modal-header">
               <div className="modal-title-area">
-                <div className="modal-cat">{activeProject.category}</div>
+                <div className="modal-cat">
+                  {activeProject.category} <span style={{ opacity: 0.3, margin: '0 10px' }}>|</span> Client: {activeProject.client}
+                </div>
                 <h2 className="modal-title">{activeProject.title}</h2>
                 {activeProject.desc && (
                   <p

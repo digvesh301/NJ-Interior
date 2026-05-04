@@ -1882,18 +1882,21 @@ button {
   color: var(--white);
 }
 
-.portfolio-card-cat {
+.portfolio-card-client {
   font-size: 0.62rem;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--gold-light);
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .portfolio-card-title {
   font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
 }
 
 .portfolio-card-action {
