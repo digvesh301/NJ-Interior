@@ -25,9 +25,6 @@ export default function About() {
     <section className="about-section" id="about" ref={sectionRef}>
       {/* Text column */}
       <div className="about-text-col">
-        <div className="section-eyebrow reveal">
-          <span>Our Story</span>
-        </div>
 
         <div className="founder-card reveal">
           <div className="founder-image-wrap">
