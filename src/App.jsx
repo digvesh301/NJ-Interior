@@ -34,15 +34,15 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path="/"          element={<HomePage />} />
-              <Route path="/about"     element={<AboutPage />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
-              <Route path="/contact"   element={<ContactPage />} />
+              <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>
           <Footer />
-          <FloatingSocials />
+          {/* <FloatingSocials /> */}
           <ContactModal isOpen={isContactModalOpen} onClose={() => setIsContactModalOpen(false)} />
         </>
       )}

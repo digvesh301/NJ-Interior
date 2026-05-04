@@ -3,9 +3,9 @@ import React from 'react';
 const MARQUEE_ITEMS = [
   'RESIDENTIAL DESIGN',
   'COMMERCIAL SPACES',
-  'BESPOKE FURNITURE',
-  '3D VISUALIZATION',
   'ARCHITECTURAL DESIGN',
+  'INTERIOR DESIGN',
+  'LANDSCAPE DESIGN'
 ];
 
 export default function TextMarquee() {

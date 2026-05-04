@@ -28,18 +28,57 @@ export default function About() {
         <div className="section-eyebrow reveal">
           <span>Our Story</span>
         </div>
-       
+
+        <div className="founder-card reveal">
+          <div className="founder-image-wrap">
+            <img 
+              src="/images/niraj_patel.png" 
+              alt="Ar. Niraj Patel - Founder of NIR DESIGNS STUDIO" 
+              className="founder-portrait"
+            />
+          </div>
+          <div className="founder-details">
+            <span className="founder-label">Founder & Principal Architect</span>
+            <h3 className="founder-name">Ar. Niraj Patel</h3>
+            <p className="founder-bio">
+              A visionary architect defined by precision and restraint, 
+              Ar. Niraj Patel leads the studio with a commitment to 
+              timeless aesthetics and quiet luxury.
+            </p>
+          </div>
+        </div>
+
+        <div className="about-intro reveal">
+          <h2 className="about-slogan">Less, but better.</h2>
+          <p className="about-tagline">Design that speaks softly, yet leaves a lasting impression.</p>
+        </div>
+
         <p className="about-body reveal">
-          NIR DESIGNS STUDIO is a premier interior design studio based in Ahmedabad, Gujarat. 
-          Founded by Niraj Patel, we specialize in transforming residential and commercial spaces 
-          into timeless works of art — where functionality meets refined aesthetics.
+          NIR DESIGNS STUDIO is a design-led architectural practice defined by precision, 
+          restraint, and an unwavering commitment to timeless aesthetics. With over 8 years of 
+          expertise and a portfolio of 150+ carefully curated projects, we approach every 
+          space with a deep understanding of proportion, materiality, and the emotional 
+          resonance of architecture.
         </p>
+        
         <p className="about-body reveal">
-          From concept to completion, every project is guided by our philosophy of thoughtful 
-          design — understanding how people live, work, and feel in their spaces. We bring 
-          ideas to life through meticulous 3D visualization, high-quality material selection, 
-          and seamless project execution.
+          We believe true luxury lies in simplicity. Clean lines, balanced forms, and 
+          refined textures come together to create environments that feel effortless 
+          yet sophisticated. Each project is a dialogue between vision and craftsmanship, 
+          translating aspirations into bespoke architectural experiences that stand 
+          the test of time.
         </p>
+
+        <div className="about-vision-mission reveal">
+          <div className="vm-item">
+            <h4>Our Vision</h4>
+            <p>To pioneer innovative, sustainable, and timeless designs that elevate the human experience in everyday living.</p>
+          </div>
+          <div className="vm-item">
+            <h4>Our Mission</h4>
+            <p>To deliver high-quality architectural solutions with precision, creativity, and an uncompromising client-first approach.</p>
+          </div>
+        </div>
 
         <div className="about-stats reveal">
           <div className="stat-item">
