@@ -5,10 +5,32 @@ import TextMarquee from '../components/TextMarquee';
 export default function AboutPage() {
   return (
     <div className="page-wrapper">
-      <div className="page-hero">
-        <div className="page-hero-overlay" />
-        <img src="/images/project1.png" alt="About NIR DESIGNS" className="page-hero-img" />
-        <div className="page-hero-content">
+      <div style={{
+        position: 'relative',
+        width: '100%',
+        height: 'calc(100vh - 80px)',
+        minHeight: '300px',
+        overflow: 'hidden',
+      }}>
+        <img
+          src="/images/about_hero.png"
+          alt="NIR DESIGNS STUDIO"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center center',
+            display: 'block',
+          }}
+        />
+        <div style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.65) 100%)',
+        }} />
+        <div style={{
+          position: 'absolute', bottom: 0, left: 0, right: 0,
+          padding: '0 6vw 48px', zIndex: 2,
+        }}>
           <div className="page-hero-eyebrow">Our Story</div>
           <h1 className="page-hero-title">NIR <span>DESIGNS STUDIO</span></h1>
           <p className="page-hero-sub">Architecture &amp; Interior Designer</p>
