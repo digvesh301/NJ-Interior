@@ -100,6 +100,8 @@ export default function Contact() {
               <div className="contact-detail-text">
                 <strong>Phone</strong>
                 +91 98982 74832
+                <br />
+                +91 97259 74832
               </div>
             </div>
             <div className="contact-detail-item">
@@ -112,7 +114,7 @@ export default function Contact() {
             <div className="contact-detail-item">
               <div className="contact-detail-icon">📍</div>
               <div className="contact-detail-text">
-                <strong>Address</strong>
+                <strong>Office 1 — Ahmedabad</strong>
                 <a
                   href="https://www.google.com/maps/place/Nir+design+studio/@23.1119865,72.5465111,17z"
                   target="_blank"
@@ -121,6 +123,21 @@ export default function Contact() {
                   id="contact-map-link"
                 >
                   B-655, Money Plant High Street, Jagatpur Road, Ahmedabad
+                </a>
+              </div>
+            </div>
+            <div className="contact-detail-item">
+              <div className="contact-detail-icon">📍</div>
+              <div className="contact-detail-text">
+                <strong>Office 2 — Unjha</strong>
+                <a
+                  href="https://www.google.com/maps/search/Tf+11+Shupethya+Complex+Near+APMC+Circle+Unjha"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'var(--gold-light)', display: 'block', marginTop: 2 }}
+                  id="contact-map-link-unjha"
+                >
+                  Tf 11, Shupethya Complex, Near APMC Circle, Unjha
                 </a>
               </div>
             </div>
