@@ -96,7 +96,7 @@ export default function About() {
       {/* Image column */}
       <div className="about-image-col reveal-right">
         <img
-          src="/images/project1.png"
+          src="/images/IMG_3876.PNG"
           alt="NIR DESIGNS signature project"
           className="about-img-main"
           loading="lazy"
