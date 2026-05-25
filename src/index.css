@@ -1498,8 +1498,8 @@ button {
 
 .page-hero {
   position: relative;
-  height: 55vh;
-  min-height: 360px;
+  height: 100vh;
+  min-height: 500px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -3574,4 +3574,4 @@ button {
     height: 450px;
   }
 }
-
+

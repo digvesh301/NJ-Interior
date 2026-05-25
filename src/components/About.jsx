@@ -29,7 +29,7 @@ export default function About() {
         <div className="founder-card reveal">
           <div className="founder-image-wrap">
             <img 
-              src="/images/niraj_patel.png" 
+              src="/images/IMG_3840.PNG" 
               alt="Ar. Niraj Patel - Founder of NIR DESIGNS STUDIO" 
               className="founder-portrait"
             />
@@ -101,12 +101,12 @@ export default function About() {
           className="about-img-main"
           loading="lazy"
         />
-        <img
+        {/* <img
           src="/images/slide1.png"
           alt="Interior detail"
           className="about-img-accent"
           loading="lazy"
-        />
+        /> */}
       </div>
     </section>
   );
