@@ -260,55 +260,11 @@ const PROJECTS = [
     ],
     desc: 'A gorgeous high-end bedroom interior utilizing custom wall paneling, elegant gold trims, and state-of-the-art lighting.',
   },
-  {
-    id: 'p1',
-    title: 'The Prestige Villa',
-    client: 'Nitin Patel',
-    category: 'Residential',
-    cover: '/images/project1.png',
-    images: ['/images/project1.png', '/images/slide1.png', '/images/slide2.png', '/images/slide5.png'],
-    desc: 'A luxury residential villa featuring an open-plan living and dining concept with warm wood accents, cove lighting, and panoramic city views.',
-  },
-  {
-    id: 'p2',
-    title: 'Skyline Office Hub',
-    client: 'Aditya Mehta',
-    category: 'Commercial',
-    cover: '/images/project2.png',
-    images: ['/images/project2.png', '/images/slide4.png'],
-    desc: 'A modern corporate workspace designed for productivity and collaboration, featuring glass partitions and ergonomic workstations.',
-  },
-  {
-    id: 'p3',
-    title: 'The White Villa',
-    client: 'Sanjay Shah',
-    category: 'Architecture',
-    cover: '/images/project3.png',
-    images: ['/images/project3.png', '/images/slide1.png', '/images/slide3.png'],
-    desc: 'A contemporary villa exterior featuring a white facade, large-format glazing, and thoughtfully landscaped surroundings.',
-  },
-  {
-    id: 'p4',
-    title: "Elara's Wonderland",
-    client: 'Kavita Joshi',
-    category: 'Children\'s Room',
-    cover: '/images/project4.png',
-    images: ['/images/project4.png', '/images/slide2.png'],
-    desc: 'A delightful children\'s bedroom blending elegant pastel tones with practical study and play zones — designed to grow with the child.',
-  },
-  {
-    id: 'p5',
-    title: 'Midnight Loft',
-    client: 'Rohan Sharma',
-    category: '3D Visualization',
-    cover: '/images/project5.png',
-    images: ['/images/project5.png', '/images/slide1.png', '/images/slide5.png'],
-    desc: 'A dramatic photorealistic 3D render of a luxury loft, showcasing the power of our visualization services to pre-approve your dream design.',
-  },
 ];
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
+  const [lightboxIndex, setLightboxIndex] = useState(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -331,12 +287,33 @@ export default function Portfolio() {
   }, []);
 
   useEffect(() => {
-    document.body.classList.toggle('modal-open', !!activeProject);
-  }, [activeProject]);
+    document.body.classList.toggle('modal-open', !!activeProject || lightboxIndex !== null);
+  }, [activeProject, lightboxIndex]);
+
+  // Handle keyboard navigation for lightbox
+  useEffect(() => {
+    if (lightboxIndex === null || !activeProject) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        setLightboxIndex((prev) => (prev > 0 ? prev - 1 : activeProject.images.length - 1));
+      } else if (e.key === 'ArrowRight') {
+        setLightboxIndex((prev) => (prev < activeProject.images.length - 1 ? prev + 1 : 0));
+      } else if (e.key === 'Escape') {
+        setLightboxIndex(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxIndex, activeProject]);
 
   // Close on backdrop click
   const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) setActiveProject(null);
+    if (e.target === e.currentTarget) {
+      setActiveProject(null);
+      setLightboxIndex(null);
+    }
   };
 
   return (
@@ -430,7 +407,10 @@ export default function Portfolio() {
               </div>
               <button
                 className="modal-close"
-                onClick={() => setActiveProject(null)}
+                onClick={() => {
+                  setActiveProject(null);
+                  setLightboxIndex(null);
+                }}
                 aria-label="Close project gallery"
                 id="modal-close-btn"
               >
@@ -440,7 +420,11 @@ export default function Portfolio() {
 
             <div className="modal-images-grid">
               {activeProject.images.map((img, idx) => (
-                <div className="modal-img-wrap" key={idx}>
+                <div 
+                  className="modal-img-wrap" 
+                  key={idx}
+                  onClick={() => setLightboxIndex(idx)}
+                >
                   <img
                     src={img}
                     alt={`${activeProject.title} — view ${idx + 1}`}
@@ -451,6 +435,61 @@ export default function Portfolio() {
               ))}
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && activeProject && (
+        <div 
+          className="lightbox-backdrop" 
+          onClick={() => setLightboxIndex(null)}
+          id="lightbox-backdrop"
+        >
+          <div className="lightbox-counter">
+            {lightboxIndex + 1} / {activeProject.images.length}
+          </div>
+
+          <button 
+            className="lightbox-close" 
+            onClick={() => setLightboxIndex(null)}
+            aria-label="Close full view"
+          >
+            ✕
+          </button>
+
+          <button 
+            className="lightbox-arrow lightbox-arrow-prev" 
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) => (prev > 0 ? prev - 1 : activeProject.images.length - 1));
+            }}
+            aria-label="Previous image"
+          >
+            &#8249;
+          </button>
+
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <img 
+              src={activeProject.images[lightboxIndex]} 
+              alt={`${activeProject.title} — full view ${lightboxIndex + 1}`} 
+              className="lightbox-img"
+            />
+            <div className="lightbox-caption">
+              <div className="lightbox-cat">{activeProject.category}</div>
+              <h3 className="lightbox-title">{activeProject.title}</h3>
+            </div>
+          </div>
+
+          <button 
+            className="lightbox-arrow lightbox-arrow-next" 
+            onClick={(e) => {
+              e.stopPropagation();
+              setLightboxIndex((prev) => (prev < activeProject.images.length - 1 ? prev + 1 : 0));
+            }}
+            aria-label="Next image"
+          >
+            &#8250;
+          </button>
         </div>
       )}
     </>

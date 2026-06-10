@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const SLIDES = [
-  { label: 'Residential Design',   img: '/images/slide1.png' },
-  { label: 'Bedroom Design',       img: '/images/slide2.png' },
-  { label: 'Modular Kitchen',      img: '/images/slide3.png' },
-  { label: 'Home Office',          img: '/images/slide4.png' },
-  { label: 'Luxury Bathroom',      img: '/images/slide5.png' },
-  { label: 'Open Plan Living',     img: '/images/project1.png' },
-  { label: 'Commercial Interior',  img: '/images/project2.png' },
-  { label: 'Exterior Elevation',   img: '/images/project3.png' },
-  { label: 'Kids Room Design',     img: '/images/project4.png' },
-  { label: '3D Visualization',     img: '/images/project5.png' },
+	{ label: 'Open Plan Living',     img: '/images/baijubhai/Baijubhai-3D (1).webp' },
+	{ label: '3D Visualization',     img: '/images/sureshbhai/SURESHBHAI_3D  (1).webp' },
+	{ label: 'Kids Room Design',     img: '/images/hiteshbhai-patel/HITESHBHAI PATEL_3D (1).webp' },
+	{ label: 'Commercial Interior',  img: '/images/navgeevan-school/IMG_8622.webp' },
+  { label: 'Residential Design',   img: '/images/maulikbhai/IMG_6880.webp' },
+  { label: 'Bedroom Design',       img: '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp' },
+  { label: 'Modular Kitchen',      img: '/images/chiragbhai/IMG_3828.webp' },
+  { label: 'Home Office',          img: '/images/jayeshbhai/Nir_desig_3D (1).webp' },
+  { label: 'Luxury Bathroom',      img: '/images/sureshbhai/SURESHBHAI_3D  (2).webp' },
+  { label: 'Exterior Elevation',   img: '/images/navgeevan-school/IMG_8622(1).webp' },
 ];
 
 export default function Categories() {
