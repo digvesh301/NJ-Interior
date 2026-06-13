@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const SLIDES = [
-	{ label: 'Open Plan Living',     img: '/images/baijubhai/Baijubhai-3D (1).webp',    alt: 'Open plan living room interior design by NIR DESIGNS STUDIO Ahmedabad - Luxury residential interior designer Gujarat' },
-	{ label: '3D Visualization',     img: '/images/sureshbhai/SURESHBHAI_3D  (1).webp',  alt: '3D visualization and interior rendering services by NIR DESIGNS STUDIO - Best 3D interior designer Ahmedabad' },
-	{ label: 'Kids Room Design',     img: '/images/hiteshbhai-patel/HITESHBHAI PATEL_3D (1).webp', alt: 'Kids room interior design Ahmedabad - Children bedroom design by NIR DESIGNS STUDIO Gujarat' },
-	{ label: 'Commercial Interior',  img: '/images/navgeevan-school/IMG_8622.webp',      alt: 'Commercial interior design for schools and offices - NIR DESIGNS STUDIO Ahmedabad Gujarat' },
-  { label: 'Residential Design',   img: '/images/maulikbhai/IMG_6880.webp',             alt: 'Luxury residential interior design Ahmedabad - Home interior designer NIR DESIGNS STUDIO' },
-  { label: 'Bedroom Design',       img: '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp', alt: 'Master bedroom interior design Ahmedabad - Premium bedroom designer NIR DESIGNS STUDIO Gujarat' },
-  { label: 'Modular Kitchen',      img: '/images/chiragbhai/IMG_3828.webp',              alt: 'Modular kitchen design Ahmedabad - Best modular kitchen interior designer NIR DESIGNS STUDIO' },
-  { label: 'Home Office',          img: '/images/jayeshbhai/Nir_desig_3D (1).webp',     alt: 'Home office interior design Ahmedabad - Modern workspace design by NIR DESIGNS STUDIO Gujarat' },
-  { label: 'Luxury Bathroom',      img: '/images/sureshbhai/SURESHBHAI_3D  (2).webp',   alt: 'Luxury bathroom interior design Ahmedabad - Premium bathroom designer NIR DESIGNS STUDIO' },
-  { label: 'Exterior Elevation',   img: '/images/navgeevan-school/IMG_8622(1).webp',    alt: 'Exterior elevation design and front elevation design Ahmedabad - Architect NIR DESIGNS STUDIO Gujarat' },
+  { label: 'Open Plan Living',     img: '/images/baijubhai/Baijubhai-3D (1).webp' },
+  { label: 'Modern Living Room',   img: '/images/dipbhai/IMG_9885.webp' },
+  { label: 'Cozy Bedroom',         img: '/images/dipakbhai/IMG_8050.webp' },
+  { label: 'Residential Design',   img: '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp' },
+  { label: 'Elegant Living Room',  img: '/images/chintanbhai/IMG_6034.webp' },
+  { label: 'Commercial Interior',  img: '/images/navjivan-school/IMG_8622.webp' },
+  { label: 'Modular Kitchen',      img: '/images/chiragbhai/IMG_3828.webp' },
+  { label: 'Bedroom Design',       img: '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp' },
+  { label: 'Residential Design',   img: '/images/gaurangbhai/C094538F-ED48-4B23-A2D6-B1A0BB81D470.webp' },
+  { label: '3D Visualization',     img: '/images/kaushikbhai-patel/E4138962-D15C-4AB1-A833-B2A1DFF3752D.webp' },
 ];
 
 export default function Categories() {

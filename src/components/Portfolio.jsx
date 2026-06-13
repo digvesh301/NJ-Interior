@@ -1,16 +1,56 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const PROJECTS = [
+  // First 10 (Client Priority)
   {
-    id: 'p-ankurbhai',
-    title: 'Ankurbhai Residence',
-    client: 'Ankurbhai',
-    category: 'Residential',
-    cover: '/images/ankurbhai/IMG_6587.webp',
+    id: 'p-baijubhai',
+    title: 'Baijubhai Residence',
+    client: 'Baijubhai',
+    category: '3D Visualization',
+    cover: '/images/baijubhai/Baijubhai-3D (1).webp',
     images: [
-      '/images/ankurbhai/IMG_6587.webp'
+      '/images/baijubhai/Baijubhai-3D (1).webp',
+      '/images/baijubhai/Baijubhai-3D (2).webp',
+      '/images/baijubhai/Baijubhai-3D (3).webp'
     ],
-    desc: 'An elegant residential interior focusing on spacious layouts, customized storage solutions, and a modern aesthetic.',
+    desc: 'A high-end 3D visualization showcase of modern living and dining spaces, created to help realize the dream home vision.',
+  },
+  {
+    id: 'p-dipbhai',
+    title: 'Dipbhai Residence',
+    client: 'Dipbhai',
+    category: 'Residential',
+    cover: '/images/dipbhai/IMG_9885.webp',
+    images: [
+      '/images/dipbhai/IMG_9885.webp',
+      '/images/dipbhai/IMG_9886.webp'
+    ],
+    desc: 'An elegant home layout focusing on custom cabinetry, sleek modular elements, and an open, airy ambience.',
+  },
+  {
+    id: 'p-dipakbhai',
+    title: 'Dipakbhai Residence',
+    client: 'Dipakbhai',
+    category: 'Residential',
+    cover: '/images/dipakbhai/IMG_8050.webp',
+    images: [
+      '/images/dipakbhai/IMG_8050.webp',
+      '/images/dipakbhai/IMG_8051.webp'
+    ],
+    desc: 'A beautifully lit modern apartment with clean aesthetics, premium false ceiling details, and warm colors.',
+  },
+  {
+    id: 'p-hiteshbhai',
+    title: 'Hitesh Residence',
+    client: 'Hiteshbhai',
+    category: 'Residential',
+    cover: '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp',
+    images: [
+      '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp',
+      '/images/hiteshbhai/3F4B0D65-F967-4BDC-9C8C-4E39A9D30E6B.webp',
+      '/images/hiteshbhai/B3177192-A404-48C8-9CF7-B35F00FF2502.webp'
+    ],
+    desc: 'A gorgeous modern residential space featuring premium wood cabinetry, refined details, and a welcoming feel.',
     altCover: 'Ankurbhai Residence - Luxury residential interior design project in Ahmedabad by NIR DESIGNS STUDIO',
   },
   {
@@ -27,56 +67,97 @@ const PROJECTS = [
     altCover: 'Chintanbhai Residence - Premium home interior design with warm lighting in Ahmedabad by NIR DESIGNS STUDIO',
   },
   {
-    id: 'p-jayeshbhai',
-    title: 'Jayeshbhai Residence',
-    client: 'Jayeshbhai',
-    category: '3D Visualization',
-    cover: '/images/jayeshbhai/Nir_desig_3D (1).webp',
+    id: 'p-navjivan-school',
+    title: 'Navjivan School',
+    client: 'Navjivan School',
+    category: 'Commercial',
+    cover: '/images/navjivan-school/IMG_8622.webp',
     images: [
-      '/images/jayeshbhai/Nir_desig_3D (1).webp',
-      '/images/jayeshbhai/Nir_desig_3D (2).webp'
+      '/images/navjivan-school/IMG_8622.webp',
+      '/images/navjivan-school/IMG_8622(1).webp',
+      '/images/navjivan-school/IMG_8623.webp',
+      '/images/navjivan-school/IMG_8624.webp'
     ],
-    desc: 'A stunning photorealistic 3D visualization depicting contemporary home interiors with custom cabinetry and layout design.',
+    desc: 'A modern, vibrant commercial interior designed for educational environments, utilizing lively colors and practical spaces.',
+  },
+  {
+    id: 'p-chiragbhai',
+    title: 'Chirag Residence',
+    client: 'Chiragbhai',
+    category: 'Residential',
+    cover: '/images/chiragbhai/IMG_3825.webp',
+    images: [
+      '/images/chiragbhai/IMG_3825.webp',
+      '/images/chiragbhai/IMG_3826.webp',
+      '/images/chiragbhai/IMG_3827.webp',
+      '/images/chiragbhai/IMG_3828.webp',
+      '/images/chiragbhai/IMG_8664.webp'
+    ],
+    desc: 'An exquisite residential interior highlighting premium textures, warm wooden panels, and bespoke furnishings.',
     altCover: 'Jayeshbhai Residence - 3D visualization interior rendering Ahmedabad by NIR DESIGNS STUDIO',
   },
   {
-    id: 'p-baijubhai',
-    title: 'Baijubhai Residence',
-    client: 'Baijubhai',
-    category: '3D Visualization',
-    cover: '/images/baijubhai/Baijubhai-3D (1).webp',
+    id: 'p-dr-kamlesh',
+    title: 'Dr. Kamlesh Residence',
+    client: 'Dr. Kamlesh',
+    category: 'Bedroom',
+    cover: '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp',
     images: [
-      '/images/baijubhai/Baijubhai-3D (1).webp',
-      '/images/baijubhai/Baijubhai-3D (2).webp',
-      '/images/baijubhai/Baijubhai-3D (3).webp'
+      '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp',
+      '/images/dr-kamlesh/Picsart_23-11-09_21-04-13-100.webp'
     ],
-    desc: 'A high-end 3D visualization showcase of modern living and dining spaces, created to help realize the dream home vision.',
+    desc: 'A gorgeous high-end bedroom interior utilizing custom wall paneling, elegant gold trims, and state-of-the-art lighting.',
     altCover: 'Baijubhai Residence - 3D interior design visualization for modern living and dining spaces Ahmedabad',
   },
   {
-    id: 'p-munnabhai',
-    title: 'Munnabhai Residence',
-    client: 'Munnabhai',
+    id: 'p-gaurangbhai',
+    title: 'Gaurang Residence',
+    client: 'Gaurangbhai',
     category: 'Residential',
-    cover: '/images/munnabhai/E8DCE522-9043-43BF-8DC2-45AD2E0AB174.webp',
+    cover: '/images/gaurangbhai/C094538F-ED48-4B23-A2D6-B1A0BB81D470.webp',
     images: [
-      '/images/munnabhai/E8DCE522-9043-43BF-8DC2-45AD2E0AB174.webp',
-      '/images/munnabhai/IMG_6434.webp'
+      '/images/gaurangbhai/C094538F-ED48-4B23-A2D6-B1A0BB81D470.webp'
     ],
-    desc: 'Exquisite modern residential interior project, featuring customized wardrobes, elegant details, and cozy lighting.',
+    desc: 'A sophisticated residential project designed with modern layouts, high-end materials, and comfortable furniture arrangements.',
     altCover: 'Munnabhai Residence - Modern residential interior with custom wardrobe design Ahmedabad by NIR DESIGNS STUDIO',
   },
   {
-    id: 'p-sureshbhai',
-    title: 'Sureshbhai Residence',
-    client: 'Sureshbhai',
+    id: 'p-kaushikbhai-patel',
+    title: 'Kaushikbhai Patel Residence',
+    client: 'Kaushikbhai Patel',
     category: '3D Visualization',
-    cover: '/images/sureshbhai/SURESHBHAI_3D  (1).webp',
+    cover: '/images/kaushikbhai-patel/E4138962-D15C-4AB1-A833-B2A1DFF3752D.webp',
     images: [
-      '/images/sureshbhai/SURESHBHAI_3D  (1).webp',
-      '/images/sureshbhai/SURESHBHAI_3D  (2).webp'
+      '/images/kaushikbhai-patel/E4138962-D15C-4AB1-A833-B2A1DFF3752D.webp',
+      '/images/kaushikbhai-patel/D79E505E-EB5A-4052-80FF-2E6070040AD5.webp',
+      '/images/kaushikbhai-patel/AD763F43-4F90-40F8-A965-3EB556896B41.webp'
     ],
-    desc: 'Bespoke 3D visual concepts for a contemporary home interior space showing elegant layout options.',
+    desc: 'A sleek and contemporary residence visualization showcasing refined finishes and layout designs.',
+  },
+
+  // Remaining Projects
+  {
+    id: 'p-ankurbhai',
+    title: 'Ankurbhai Residence',
+    client: 'Ankurbhai',
+    category: 'Residential',
+    cover: '/images/ankurbhai/IMG_6587.webp',
+    images: [
+      '/images/ankurbhai/IMG_6587.webp'
+    ],
+    desc: 'An elegant residential interior focusing on spacious layouts, customized storage solutions, and a modern aesthetic.',
+  },
+  {
+    id: 'p-arvindbhai',
+    title: 'Arvind Residence',
+    client: 'Arvindbhai',
+    category: 'Residential',
+    cover: '/images/arvindbhai/IMG_6982.webp',
+    images: [
+      '/images/arvindbhai/IMG_6982.webp',
+      '/images/arvindbhai/IMG_6983.webp'
+    ],
+    desc: 'A modern residential project with high-quality interior finishes, elegant lighting, and clean lines.',
     altCover: 'Sureshbhai Residence - 3D visualization for contemporary home interior design Gujarat NIR DESIGNS STUDIO',
   },
   {
@@ -142,18 +223,16 @@ const PROJECTS = [
     altCover: 'Maulik Residence - Extensive residential interior with premium wood panels design Ahmedabad Gujarat',
   },
   {
-    id: 'p-navgeevan-school',
-    title: 'Navgeevan School',
-    client: 'Navgeevan School',
-    category: 'Commercial',
-    cover: '/images/navgeevan-school/IMG_8622.webp',
+    id: 'p-munnabhai',
+    title: 'Munnabhai Residence',
+    client: 'Munnabhai',
+    category: 'Residential',
+    cover: '/images/munnabhai/E8DCE522-9043-43BF-8DC2-45AD2E0AB174.webp',
     images: [
-      '/images/navgeevan-school/IMG_8622.webp',
-      '/images/navgeevan-school/IMG_8622(1).webp',
-      '/images/navgeevan-school/IMG_8623.webp',
-      '/images/navgeevan-school/IMG_8624.webp'
+      '/images/munnabhai/E8DCE522-9043-43BF-8DC2-45AD2E0AB174.webp',
+      '/images/munnabhai/IMG_6434.webp'
     ],
-    desc: 'A modern, vibrant commercial interior designed for educational environments, utilizing lively colors and practical spaces.',
+    desc: 'Exquisite modern residential interior project, featuring customized wardrobes, elegant details, and cozy lighting.',
     altCover: 'Navgeevan School - Commercial school interior design Ahmedabad by NIR DESIGNS STUDIO Gujarat',
   },
   {
@@ -174,7 +253,7 @@ const PROJECTS = [
       '/images/niravbhai/b32376c3-8438-4b9e-85e6-524819cb88d4.webp',
       '/images/niravbhai/b7464980-324f-463e-ab9c-b27d8e883770.webp',
       '/images/niravbhai/be2fffe1-1110-4467-97de-ff075bf8ef6a.webp',
-      '/images/niravbhai/d72973e1-2a69-491d-83ed-894f22459093.webp'
+      '/images/niravbhai/895ad1a3-b5ef-42a3-ba83-d0ed34794226.webp'
     ],
     desc: 'A beautiful luxury residential space highlighting premium paneling, custom sliding wardrobes, and modern styling.',
     altCover: 'Nirav Residence - Luxury residential interior with custom sliding wardrobes Ahmedabad NIR DESIGNS STUDIO',
@@ -194,7 +273,18 @@ const PROJECTS = [
       '/images/pragneshbhai/EDBFF6ED-7F9D-44AF-A101-39D7E4A1B50F.webp'
     ],
     desc: 'Elegant residential interiors utilizing premium wood textures, functional styling, and ambient lighting.',
-    altCover: 'Pragnesh Residence - Elegant residential interior design with premium textures Ahmedabad Gujarat',
+  },
+  {
+    id: 'p-sureshbhai',
+    title: 'Sureshbhai Residence',
+    client: 'Sureshbhai',
+    category: '3D Visualization',
+    cover: '/images/sureshbhai/SURESHBHAI_3D  (1).webp',
+    images: [
+      '/images/sureshbhai/SURESHBHAI_3D  (1).webp',
+      '/images/sureshbhai/SURESHBHAI_3D  (2).webp'
+    ],
+    desc: 'Bespoke 3D visual concepts for a contemporary home interior space showing elegant layout options.',
   },
   {
     id: 'p-virajbhai',
@@ -267,16 +357,55 @@ const PROJECTS = [
     altCover: 'Dixit Residence - Modern apartment interior with false ceiling design Ahmedabad Gujarat',
   },
   {
-    id: 'p-dr-kamlesh',
-    title: 'Dr. Kamlesh Residence',
-    client: 'Dr. Kamlesh',
-    category: 'Bedroom',
-    cover: '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp',
+    id: 'p-jayeshbhai',
+    title: 'Jayeshbhai Residence',
+    client: 'Jayeshbhai',
+    category: '3D Visualization',
+    cover: '/images/jayeshbhai/Nir_desig_3D (1).webp',
     images: [
-      '/images/dr-kamlesh/bedroom-1-1_231109_205925_1.webp',
-      '/images/dr-kamlesh/Picsart_23-11-09_21-04-13-100.webp'
+      '/images/jayeshbhai/Nir_desig_3D (1).webp',
+      '/images/jayeshbhai/Nir_desig_3D (2).webp'
     ],
-    desc: 'A gorgeous high-end bedroom interior utilizing custom wall paneling, elegant gold trims, and state-of-the-art lighting.',
+    desc: 'A stunning photorealistic 3D visualization depicting contemporary home interiors with custom cabinetry and layout design.',
+  },
+  {
+    id: 'p-ajitbhai',
+    title: 'Ajitbhai Residence',
+    client: 'Ajitbhai',
+    category: 'Residential',
+    cover: '/images/ajitbhai/IMG_6607.webp',
+    images: [
+      '/images/ajitbhai/IMG_6607.webp',
+      '/images/ajitbhai/IMG_6619.webp'
+    ],
+    desc: 'A beautiful residential interior project featuring customized furniture design and cozy room layouts.',
+  },
+  {
+    id: 'p-govingbhai-patel',
+    title: 'Govindbhai Patel Residence',
+    client: 'Govindbhai Patel',
+    category: 'Residential',
+    cover: '/images/govingbhai-patel/92E6D8FF-5C1F-4D7B-BC93-F3AE4F3A4AF3.webp',
+    images: [
+      '/images/govingbhai-patel/92E6D8FF-5C1F-4D7B-BC93-F3AE4F3A4AF3.webp',
+      '/images/govingbhai-patel/82AC6041-1015-4CC4-9338-9FC312A6CBE1.webp',
+      '/images/govingbhai-patel/9E6BF8B5-4915-46E3-8E8E-1C441F43BB26.webp',
+      '/images/govingbhai-patel/E713B2B5-F1EF-4330-9CB2-67EE00495239.webp'
+    ],
+    desc: 'A spacious and modern residential design featuring elegant wood finishes and comfortable layouts.',
+  },
+  {
+    id: 'p-benjing',
+    title: 'Beijing Project',
+    client: 'Beijing',
+    category: '3D Visualization',
+    cover: '/images/benjing/Baijubhai-3D (1).webp',
+    images: [
+      '/images/benjing/Baijubhai-3D (1).webp',
+      '/images/benjing/Baijubhai-3D (2).webp',
+      '/images/benjing/Baijubhai-3D (3).webp'
+    ],
+    desc: 'A premium 3D visualization showcase of modern and luxurious interior design layouts.',
     altCover: 'Dr. Kamlesh Residence - High-end bedroom interior with custom wall paneling Ahmedabad NIR DESIGNS STUDIO',
   },
 ];

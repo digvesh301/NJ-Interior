@@ -20,7 +20,7 @@ export default function AboutPage() {
         overflow: 'hidden',
       }}>
         <img
-          src="/images/about_hero.png"
+          src="/images/about_hero.webp"
           alt="NIR DESIGNS STUDIO - Best Interior Design & Architecture Studio in Ahmedabad, Gujarat"
           style={{
             width: '100%',

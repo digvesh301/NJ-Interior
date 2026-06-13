@@ -55,7 +55,7 @@ export default function IntroLoader({ show }) {
         {/* Logo — stamp + shimmer reveal */}
         <div className="intro-logo-glow">
           <img
-            src="/images/nd_blueprint_logo.png"
+            src="/images/nd_blueprint_logo.webp"
             alt="NIR DESIGNS Logo"
             className="intro-logo-img"
           />

@@ -29,7 +29,7 @@ export default function About() {
         <div className="founder-card reveal">
           <div className="founder-image-wrap">
             <img 
-              src="/images/IMG_3840.PNG" 
+              src="/images/IMG_3840.webp" 
               alt="Ar. Niraj Patel - Founder & Principal Architect of NIR DESIGNS STUDIO, Best Interior Designer in Ahmedabad, Gujarat" 
               className="founder-portrait"
             />
@@ -96,13 +96,13 @@ export default function About() {
       {/* Image column */}
       <div className="about-image-col reveal-right">
         <img
-          src="/images/IMG_3876.PNG"
+          src="/images/IMG_3876.webp"
           alt="Premium luxury interior design project by NIR DESIGNS STUDIO Ahmedabad - Residential & Commercial Interior Designer in Gujarat"
           className="about-img-main"
           loading="lazy"
         />
         {/* <img
-          src="/images/slide1.png"
+          src="/images/slide1.webp"
           alt="Interior detail"
           className="about-img-accent"
           loading="lazy"

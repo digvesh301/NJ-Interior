@@ -13,7 +13,7 @@ export default function PortfolioPage() {
       />
       {/* <div className="page-hero">
         <div className="page-hero-overlay" />
-        <img src="/images/slide1.png" alt="Portfolio" className="page-hero-img" />
+        <img src="/images/slide1.webp" alt="Portfolio" className="page-hero-img" />
         <div className="page-hero-content">
           <div className="page-hero-eyebrow">Our Work</div>
           <h1 className="page-hero-title">Portfolio</h1>

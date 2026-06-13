@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 const SLIDES = [
   {
     id: 1,
-    image: '/images/slide1.png',
+    image: '/images/slide1.webp',
     label: 'Residential Design',
     title: 'The Art of Refined Living',
     subtitle: 'Luxury Living Room Interior Design · Ahmedabad',
@@ -13,7 +13,7 @@ const SLIDES = [
   },
   {
     id: 2,
-    image: '/images/slide2.png',
+    image: '/images/slide2.webp',
     label: 'Master Suite',
     title: 'Where Comfort Meets Elegance',
     subtitle: 'Master Bedroom Design · Minimalist Retreat',
@@ -23,7 +23,7 @@ const SLIDES = [
   },
   {
     id: 3,
-    image: '/images/slide3.png',
+    image: '/images/slide3.webp',
     label: 'Kitchen Design',
     title: 'Culinary Spaces, Elevated',
     subtitle: 'Modular Kitchen Design · Contemporary Style',
@@ -33,7 +33,7 @@ const SLIDES = [
   },
   {
     id: 4,
-    image: '/images/slide4.png',
+    image: '/images/slide4.webp',
     label: 'Home Office',
     title: 'Spaces That Inspire Work',
     subtitle: 'Home Office Interior Design · Natural Warmth',
@@ -43,7 +43,7 @@ const SLIDES = [
   },
   {
     id: 5,
-    image: '/images/slide5.png',
+    image: '/images/slide5.webp',
     label: 'Luxury Bath',
     title: 'A Sanctuary of Serenity',
     subtitle: 'Luxury Bathroom Design · Spa Aesthetic',
