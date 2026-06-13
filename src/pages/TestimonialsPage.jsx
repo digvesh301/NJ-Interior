@@ -1,5 +1,6 @@
 import React from 'react';
 import TestimonialMarquee from '../components/TestimonialMarquee';
+import SEOHead from '../components/SEOHead';
 
 const allTestimonials = [
     { name: "Aarav Desai", role: "Residential Project", text: "NIR DESIGNS transformed our apartment into a luxurious haven. Their attention to detail and ability to blend modern aesthetics with functional spaces is truly remarkable.", rating: 5, title: "A Masterpiece of Comfort" },
@@ -13,6 +14,12 @@ const allTestimonials = [
 export default function TestimonialsPage() {
     return (
         <div className="page-transition" style={{ backgroundColor: 'var(--off-white)', minHeight: '100vh' }}>
+            <SEOHead
+                title="Client Reviews & Testimonials | Top-Rated Interior Designer Ahmedabad | NIR DESIGNS STUDIO"
+                description="Read 5-star client reviews and testimonials for NIR DESIGNS STUDIO Ahmedabad. Our clients love our residential interior design, commercial interiors, 3D visualization, and turnkey solutions. 100% client satisfaction guaranteed."
+                keywords="interior designer reviews Ahmedabad, NIR DESIGNS STUDIO testimonials, best interior designer reviews Gujarat, client feedback interior design, 5 star interior designer, trusted interior designer Ahmedabad, interior design client satisfaction"
+                path="/testimonials"
+            />
             {/* Header */}
             <section className="testimonials-header-section">
                 <div className="testimonials-header-content">

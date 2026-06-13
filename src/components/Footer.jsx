@@ -14,7 +14,7 @@ export default function Footer() {
       {/* ── Brand Block – centered ── */}
       <div className="footer-brand">
         <div className="footer-brand-logo">
-          <img src="/images/nd_blueprint_logo.png" alt="NIR DESIGNS" />
+          <img src="/images/nd_blueprint_logo.png" alt="NIR DESIGNS STUDIO Logo - Interior Designer & Architect Ahmedabad Gujarat" />
         </div>
         <h2 className="footer-brand-name">NIR <span>DESIGNS STUDIO</span></h2>
         <p className="footer-brand-sub">Architecture &amp; Interior Designer</p>

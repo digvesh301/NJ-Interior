@@ -1,0 +1,12 @@
+# robots.txt — NIR DESIGNS STUDIO
+# https://www.nirdesignsstudio.in/
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://www.nirdesignsstudio.in/sitemap.xml
+
+# Crawl-delay (optional, polite crawling)
+Crawl-delay: 1

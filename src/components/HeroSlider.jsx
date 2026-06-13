@@ -6,34 +6,38 @@ const SLIDES = [
     image: '/images/slide1.png',
     label: 'Residential Design',
     title: 'The Art of Refined Living',
-    subtitle: 'Luxury Living Room · Ahmedabad',
+    subtitle: 'Luxury Living Room Interior Design · Ahmedabad',
+    alt: 'Luxury living room interior design by NIR DESIGNS STUDIO - Best residential interior designer in Ahmedabad, Gujarat',
     category: 'Living Room',
-    zoom: 'zoom-in',        // zoom from center
+    zoom: 'zoom-in',
   },
   {
     id: 2,
     image: '/images/slide2.png',
     label: 'Master Suite',
     title: 'Where Comfort Meets Elegance',
-    subtitle: 'Master Bedroom · Minimalist Retreat',
+    subtitle: 'Master Bedroom Design · Minimalist Retreat',
+    alt: 'Master bedroom interior design Ahmedabad - Premium bedroom designer NIR DESIGNS STUDIO Gujarat',
     category: 'Bedroom',
-    zoom: 'zoom-in-top',    // zoom from top-left
+    zoom: 'zoom-in-top',
   },
   {
     id: 3,
     image: '/images/slide3.png',
     label: 'Kitchen Design',
     title: 'Culinary Spaces, Elevated',
-    subtitle: 'Modular Kitchen · Contemporary',
+    subtitle: 'Modular Kitchen Design · Contemporary Style',
+    alt: 'Modular kitchen interior design Ahmedabad - Best kitchen designer NIR DESIGNS STUDIO Gujarat',
     category: 'Kitchen',
-    zoom: 'zoom-in-bottom', // zoom from bottom-right
+    zoom: 'zoom-in-bottom',
   },
   {
     id: 4,
     image: '/images/slide4.png',
     label: 'Home Office',
     title: 'Spaces That Inspire Work',
-    subtitle: 'Work Studio · Natural Warmth',
+    subtitle: 'Home Office Interior Design · Natural Warmth',
+    alt: 'Home office interior design Ahmedabad - Modern workspace design NIR DESIGNS STUDIO Gujarat',
     category: 'Office',
     zoom: 'zoom-in',
   },
@@ -42,7 +46,8 @@ const SLIDES = [
     image: '/images/slide5.png',
     label: 'Luxury Bath',
     title: 'A Sanctuary of Serenity',
-    subtitle: 'Master Bathroom · Spa Aesthetic',
+    subtitle: 'Luxury Bathroom Design · Spa Aesthetic',
+    alt: 'Luxury bathroom interior design Ahmedabad - Premium bathroom designer NIR DESIGNS STUDIO Gujarat',
     category: 'Bathroom',
     zoom: 'zoom-in-top',
   },
@@ -101,7 +106,7 @@ export default function HeroSlider() {
             <img
               key={idx === activeIdx ? animKey : slide.id}
               src={slide.image}
-              alt={slide.title}
+              alt={slide.alt || slide.title}
               className={`hero-slide-img hero-slide-img--${slide.zoom}`}
               loading={idx === 0 ? 'eager' : 'lazy'}
             />

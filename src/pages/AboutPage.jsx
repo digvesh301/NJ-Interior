@@ -1,10 +1,17 @@
 import React from 'react';
 import About from '../components/About';
 import TextMarquee from '../components/TextMarquee';
+import SEOHead from '../components/SEOHead';
 
 export default function AboutPage() {
   return (
     <div className="page-wrapper">
+      <SEOHead
+        title="About NIR DESIGNS STUDIO | Ar. Niraj Patel | Best Architect & Interior Designer Ahmedabad | 8+ Years | 150+ Projects"
+        description="Learn about NIR DESIGNS STUDIO, Ahmedabad's premier architecture & interior design studio founded by Ar. Niraj Patel. 8+ years of experience, 150+ residential & commercial projects completed with 100% client satisfaction across Gujarat. Our vision, mission, and design philosophy."
+        keywords="about NIR DESIGNS STUDIO, Niraj Patel architect Ahmedabad, interior designer Ahmedabad profile, best architect Gujarat, interior design company Ahmedabad, architecture firm Gujarat, Ar. Niraj Patel, interior design experience, residential projects Ahmedabad, commercial interior designer"
+        path="/about"
+      />
       <div style={{
         position: 'relative',
         width: '100%',
@@ -14,7 +21,7 @@ export default function AboutPage() {
       }}>
         <img
           src="/images/about_hero.png"
-          alt="NIR DESIGNS STUDIO"
+          alt="NIR DESIGNS STUDIO - Best Interior Design & Architecture Studio in Ahmedabad, Gujarat"
           style={{
             width: '100%',
             height: '100%',
