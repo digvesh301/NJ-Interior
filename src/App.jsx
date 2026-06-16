@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import IntroLoader from './components/IntroLoader';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -39,6 +39,8 @@ function App() {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              {/* Fallback to homepage for unmatched routes */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
           <Footer />
