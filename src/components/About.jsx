@@ -30,7 +30,7 @@ export default function About() {
           <div className="founder-image-wrap">
             <img 
               src="/images/IMG_3840.webp" 
-              alt="Ar. Niraj Patel - Founder & Principal Architect of NIR DESIGNS STUDIO, Best Interior Designer in Ahmedabad, Gujarat" 
+              alt="Ar. Niraj Patel - Founder & Principal Architect of NIR DESIGNS STUDIO, Architect Designer & Interior Designer in Ahmedabad, Gujarat" 
               className="founder-portrait"
             />
           </div>
