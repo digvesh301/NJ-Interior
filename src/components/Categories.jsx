@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 const SLIDES = [
   { label: 'Open Plan Living',     img: '/images/baijubhai/Baijubhai-3D (1).webp' },
   { label: 'Modern Living Room',   img: '/images/dipbhai/IMG_9885.webp' },
-  { label: 'Cozy Bedroom',         img: '/images/dipakbhai/IMG_8050.webp' },
+  { label: 'Cozy Bedroom',         img: '/images/dipakbhai/final-cam-01.jpg' },
   { label: 'Residential Design',   img: '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp' },
   { label: 'Elegant Living Room',  img: '/images/chintanbhai/IMG_6034.webp' },
   { label: 'Commercial Interior',  img: '/images/navjivan-school/IMG_8622.webp' },
