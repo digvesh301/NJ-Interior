@@ -161,20 +161,6 @@ const PROJECTS = [
     altCover: 'Hiteshbhai Patel Residence - 3D bedroom visualization with wood panelling interior design Ahmedabad',
   },
   {
-    id: 'p-hiteshbhai',
-    title: 'Hitesh Residence',
-    client: 'Hiteshbhai',
-    category: 'Residential',
-    cover: '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp',
-    images: [
-      '/images/hiteshbhai/30CA75C7-E296-4EF9-A4F6-7C92DADCEB07.webp',
-      '/images/hiteshbhai/3F4B0D65-F967-4BDC-9C8C-4E39A9D30E6B.webp',
-      '/images/hiteshbhai/B3177192-A404-48C8-9CF7-B35F00FF2502.webp'
-    ],
-    desc: 'A gorgeous modern residential space featuring premium wood cabinetry, refined details, and a welcoming feel.',
-    altCover: 'Hitesh Residence - Premium wood cabinetry residential interior design Ahmedabad NIR DESIGNS STUDIO',
-  },
-  {
     id: 'p-maulikbhai',
     title: 'Maulik Residence',
     client: 'Maulikbhai',
